@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>图片的高清显示</title>
+    <style>
+        /* #demo {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        } */
+
+        .logo {
+            width: 200px;
+            height: 200px;
+        }
+
+        /* 因为dpr可能有小数，所以要写min，当dpr为2.6时，可以取得dpr  min为2的值 */
+        /* 注意2、3的顺序不能换。因为匹配会一个个进行。取得最后的值 */
+        @media screen and (-webkit-min-device-pixel-ratio:2) {
+
+            /* #demo {
+                background-color: orange;
+            } */
+            .logo {
+                content: url('../img/logo@2x.png')
+            }
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio:3) {
+
+            /* #demo {
+                background-color: pink;
+            } */
+            .logo {
+                content: url('../img/logo@3x.png')
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="demo"></div> -->
+    <img class="logo" src="../img/logo.png" alt="">
+    <!-- <img class="logo" src="../img/logo@2x.png" alt=""> -->
+    <!-- <img class="logo" src="../img/logo@3x.png" alt=""> -->
+</body>
+
+</html>

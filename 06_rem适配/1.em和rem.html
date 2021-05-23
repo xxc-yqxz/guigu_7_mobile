@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>em与rem</title>
+    <style>
+        html,
+        body {
+            font-size: 50px;
+        }
+
+        #test1 {
+            width: 400px;
+            height: 400px;
+            background-color: orange;
+            font-size: 20px;
+        }
+
+        #test2 {
+            /* 1em 相对的是父级元素的1个单位字体大小 */
+            /* 1rem 相对的是根元素的1个单位字体大小 */
+            width: 4rem;
+            height: 4rem;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test1">
+        <div id="test2"></div>
+    </div>
+</body>
+
+</html>

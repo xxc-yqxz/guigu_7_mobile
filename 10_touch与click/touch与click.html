@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">点我</button>
+    <script type="text/javascript">
+        let btn = document.getElementById('btn')
+        let time
+        btn.addEventListener('click', () => {
+            console.log('你点击了我', Date.now() - time)
+        })
+        // 触摸事件会先触发,并相差一段时间，受理想视口是否开启影响，如果开启，则会变快一些。
+        btn.addEventListener('touchstart', () => {
+            time = Date.now()
+            console.log('你触摸了我')
+        })
+    </script>
+</body>
+
+</html>

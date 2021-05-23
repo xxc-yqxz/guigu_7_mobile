@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>2_移动端_布局视口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #info {
+            font-size: 50px;
+            /*使得布满整个手机屏幕，多一丢丢都会出现横向滚动条(某些浏览器不准)*/
+            width: 980 px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="info"></div>
+    <script type="text/javascript">
+        const layoutWidth = document.documentElement.clientWidth
+        const info = document.getElementById('info')
+        info.innerHTML = '您设备的布局视口宽度为:' + layoutWidth + 'px(css像素)'
+    </script>
+</body>
+
+</html>
